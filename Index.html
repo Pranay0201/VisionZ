@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VisionZ - Smart Eye Distance Guard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div>
+            <div class="logo">
+                Vision<span>Z</span>
+            </div>
+
+            <p>Smart Eye Distance Guard</p>
+        </div>
+
+        <div class="eye-logo">◉</div>
+
+    </header>
+
+
+    <!-- DISTANCE -->
+    <section class="distance-card">
+
+        <div class="distance-circle">
+
+            <div class="eye">◉</div>
+
+            <small>CURRENT DISTANCE</small>
+
+            <strong id="distance">--</strong>
+
+            <span>mm</span>
+
+            <div id="cmDistance">-- cm</div>
+
+        </div>
+
+
+        <div class="distance-info">
+
+            <div id="statusIcon" class="status-icon">
+                ✓
+            </div>
+
+            <h2 id="status">Waiting</h2>
+
+            <p id="statusText">
+                Connect your VisionZ hardware
+            </p>
+
+            <div class="recommended">
+
+                💡 Recommended distance
+
+                <b>≥ 400 mm</b>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTROLS -->
+    <div class="grid">
+
+        <!-- PROTECTION -->
+        <section class="card">
+
+            <div class="card-title">
+
+                <div class="icon green">
+                    🛡
+                </div>
+
+                <div>
+
+                    <h3>Protection Mode</h3>
+
+                    <p>Automatic eye protection</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="control-row">
+
+                <span id="protectionText">
+                    Protection OFF
+                </span>
+
+                <button
+                    type="button"
+                    id="protectionButton"
+                    class="toggle off">
+
+                    OFF
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- HARDWARE -->
+        <section class="card">
+
+            <div class="card-title">
+
+                <div class="icon blue">
+                    🔗
+                </div>
+
+                <div>
+
+                    <h3>Hardware</h3>
+
+                    <p>ESP32-C3 + VL53L0X</p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="connectButton"
+                class="connect-button">
+
+                <span id="connectionDot">
+                    ●
+                </span>
+
+                <span id="connectionText">
+                    Connect Bluetooth
+                </span>
+
+            </button>
+
+        </section>
+
+    </div>
+
+
+    <!-- ABOUT -->
+    <section class="about-card">
+
+        <div class="about-icon">
+            👁
+        </div>
+
+        <div>
+
+            <h3>About VisionZ</h3>
+
+            <p>
+                VisionZ monitors your viewing distance
+                and warns you when your phone gets
+                too close to your eyes.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        VisionZ • Smart Eye Distance Guard
+    </footer>
+
+</div>
+
+
+<!-- BLACK PROTECTION OVERLAY -->
+
+<div
+    id="blackOverlay"
+    class="black-overlay">
+
+    <div class="warning-box">
+
+        <div class="warning-icon">
+            ⚠
+        </div>
+
+        <h1>TOO CLOSE</h1>
+
+        <p>
+            Please move your phone farther away.
+        </p>
+
+        <strong id="overlayDistance">
+            -- mm
+        </strong>
+
+        <div class="moving-message">
+            Move back to continue
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
